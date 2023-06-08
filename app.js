@@ -19,7 +19,11 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://127.0.0.1:27017/blogDB")
+mongoose.connect("mongodb://127.0.0.1:27017/blogDB", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  family: 4,
+})
   .then(() => {
     console.log("Connected successfully to Mongo!");
   }).catch((err) => {
