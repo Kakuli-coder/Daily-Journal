@@ -3,8 +3,6 @@ const express = require("express");
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const Post = require("./models/post");
-const Contact = require("./models/contact");
 const AppError = require("./AppError");
 
 const homeStartingContent = `A journal is your inner unsullied voice. It is your best friend with whom you can share all your secrets and vulnerabilities that does not judge you and listens to every bit your heart patiently.
@@ -20,17 +18,16 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect(process.env.DATABASE_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  family: 4,
-})
+mongoose.connect("mongodb://127.0.0.1:27017/blogDB")
   .then(() => {
     console.log("Connected successfully to Mongo!");
   }).catch((err) => {
     console.log("Mongo Connection error!");
     console.log(err);
   });
+
+const Post = require("./models/post");
+const Contact = require("./models/contact");
 
 function wrapAsync(fn) {
   return function (req, res, next) {
