@@ -1,0 +1,24 @@
+<%- include("partials/header"); -%>
+
+    <h1>Welcome to Daily Journal</h1>
+    <br>
+    <p class="quote">“The starting point of discovering who you are, your gifts, your talents, your dreams, is being
+        comfortable with yourself. Spend time alone. Write in a journal.”</p>
+    <p class="author">— Robin Sharma</p>
+    <p class="startingContent">
+        <%= homeStartingContent %>
+    </p>
+    <hr>
+    <% posts.forEach((post)=> { %>
+        <h3>
+            <%= post.title %>
+        </h3>
+        <p>
+            <%= (post.body).slice(0, 150) + "..." %>
+                <a href="/posts/<%= post._id %>"> Read More</a>
+        </p>
+        <br>
+        <% }); %>
+        <br>
+
+<%- include("partials/footer"); -%>
