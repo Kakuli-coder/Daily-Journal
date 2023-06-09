@@ -21,7 +21,7 @@ app.use(express.static("public"));
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("Connected successfully to Mongo!");
+    console.log("Connected successfully to MongoDB!");
   } catch (err) {
     console.log("Mongo Connection error!", err);
   };
