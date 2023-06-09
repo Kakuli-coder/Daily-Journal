@@ -21,7 +21,7 @@ app.use(express.static("public"));
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("Connected successfully to MongoDB!");
+    console.log("Connected successfully to Mongo!");
   } catch (err) {
     console.log("Mongo Connection error!", err);
   };
@@ -103,7 +103,6 @@ app.use((err, req, res, next) => {
   res.status(status).send(message);
 });
 
-app.listen(process.env.PORT || 3000, function () {
-  console.log("Server is runnig on port 3000");
+app.listen(process.env.PORT, () => {
+  console.log(`Server is runnig on port ${process.env.PORT}`);
 });
-
