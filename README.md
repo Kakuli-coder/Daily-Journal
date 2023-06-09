@@ -10,7 +10,7 @@
 ## Live Application URL
 
 Go to Deployed Application link 👇 <br />
-<a href="" alt="App-link" target="_blank">Daily Journal</a> </br>
+<a href="https://daily-journal-7o3f.onrender.com" alt="App-link" target="_blank">Daily Journal</a> </br>
 
 ## Daily Journal Preview
 
