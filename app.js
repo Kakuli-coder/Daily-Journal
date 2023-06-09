@@ -67,9 +67,10 @@ app.get("/compose", (req, res) => {
 });
 
 app.post("/compose", wrapAsync(async (req, res) => {
-  const { titleTxt, bodyTxt } = req.body;
+  const { titleTxt, authorTxt, bodyTxt } = req.body;
   const post = new Post({
     title: titleTxt,
+    author: authorTxt,
     body: bodyTxt
   });
   await post.save();

@@ -5,6 +5,9 @@ const postSchema = mongoose.Schema({
         type: String,
         required: [true, "Title cannot be blank!"]
     },
+    author: {
+        type: String
+    },
     body: {
         type: String,
         required: [true, "Body cannot be blank!"]

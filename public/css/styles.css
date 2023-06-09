@@ -58,6 +58,10 @@ ul {
 /* home.ejs ends */
 
 /* compose.ejs */
+.compose-para {
+    color: #696969;
+}
+
 .compose-container {
     max-width: 1500px;
     margin: 20px auto;
@@ -80,6 +84,14 @@ ul {
 
 /* compose.ejs ends */
 
+/* post.ejs */
+.author-txt {
+    color: #777;
+    /* font-weight: 400; */
+    font-style: italic;
+}
+/* post.ejs ends */
+
 /* Contact Us */
 .contact-container {
     max-width: 500px;
@@ -93,6 +105,11 @@ ul {
 .contact-heading {
     text-align: center;
     margin-bottom: 20px;
+}
+
+.contact-para {
+    color: #777;
+    text-align: center;
 }
 
 label {

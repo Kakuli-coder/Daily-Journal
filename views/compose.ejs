@@ -1,20 +1,27 @@
 <%- include("partials/header"); -%>
 
     <h1>Compose</h1>
-    <br>
+    <hr>
+    <p class="compose-para">Capture the essence of your daily journey and document it effortlessly as you compose your daily journals with ease on this
+        website. Happy journaling!</p>
+    <!-- <br> -->
     <div class="compose-container">
-    <form action="/compose" method="post">
-        <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" name="titleTxt">
-        </div>
-        <div class="mb-3">
-            <label for="post" class="form-label">Post</label>
-            <textarea class="form-control" id="post" rows="5" name="bodyTxt"></textarea>
-        </div>
-        <br>
-        <button type="submit" name="button" class="btn btn-primary compose-btn">Publish</button>
-    </form>
-</div>
+        <form action="/compose" method="post">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="titleTxt" required>
+            </div>
+            <div class="mb-3">
+                <label for="author" class="form-label">Author</label>
+                <input type="text" class="form-control" id="author" name="authorTxt" required>
+            </div>
+            <div class="mb-3">
+                <label for="post" class="form-label">Post</label>
+                <textarea class="form-control" id="post" rows="5" name="bodyTxt"></textarea>
+            </div>
+            <br>
+            <button type="submit" name="button" class="btn btn-primary compose-btn">Publish</button>
+        </form>
+    </div>
 
     <%- include("partials/footer"); -%>
