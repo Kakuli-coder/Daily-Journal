@@ -41,14 +41,9 @@ ul {
 
 .navbar-brand {
     color: #911abc !important;
-    margin-top: 6px;
+    margin-top: 10px;
     letter-spacing: 5px;
 }
-
-.nav-links {
-    margin-left: 660px;
-}
-
 /* navbar ends */
 
 /* home.ejs */
