@@ -18,17 +18,10 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-// mongoose.connect("mongodb://127.0.0.1:27017/blogDB").then(() => {
-//     console.log("Connected successfully to Mongo!");
-//   }).catch((err) => {
-//     console.log("Mongo Connection error!");
-//     console.log(err);
-//   });
-
 const connectDB = async () => {
   try {
+    await mongoose.connect(process.env.MONGO_URI);
     console.log("Connected successfully to Mongo!");
-    await mongoose.connect("mongodb://127.0.0.1:27017/blogDB");
   } catch (err) {
     console.log("Mongo Connection error!", err);
   };
