@@ -35,7 +35,7 @@ npm install -g nodemon
 
 ## Cloning and Running the Application in local
 
-1. cd to the location in terminal where you want to clone the repository.
+1. cd to the location in terminal where you want to clone the repository
 
 ```
   cd your_path
